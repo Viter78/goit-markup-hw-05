@@ -10,58 +10,85 @@
         --secondary-bg-color: #f4f4fd;
 } 
 
-/* ================= COMPONENTS ================= */
-
-.list {list-style: none;}
-
-.link, logo {
-        text-decoration: none; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+        margin: 0;
 }
-
-h1,h2,h3,h4,h5,h6,p {
-        margin-top: 0;
-        margin-bottom: 0;
-}
-
-ul {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0;
-} 
 
 img {
         display: block;
+        max-width: 100%;
+        height: auto;
 }
 
-.container {
-        width: 1158px;
-        margin: 0 auto;
-        padding: 0 15px;
-}
-
-.address-contacts {
-        font-style: normal;
-}
-
-.button, filter-button {
+button {
         cursor: pointer;
-        padding: 16px 32px;
-        gap: 10px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border: none;
         border-radius: 4px;
+        letter-spacing: 0.04em;
+}
+
+ul,
+ol {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+}
+
+a {
+        text-decoration: none;
 }
 
 body {
         font-family: var(--main-font-family);
-        font-style: normal;
         font-weight: 500;
         color: var(--primary-txt-color);
-        background-color:var(--primary-bg-color);
+        background-color: var(--primary-bg-color);
+}
+
+.list {
+        list-style: none;
+        background-color: #ffffff;
+        display: flex;
+}
+
+.link {
+        text-decoration: none;
+        color: inherit;
+}
+
+.link:visited {
+        color: inherit;
+}
+
+.link:hover,
+.link:focus,
+.link:active,
+.order-btn:active,
+.filter-btn:active {
+        color: #404BBF;
 }
 
 .section {
         padding-top: 120px;
         padding-bottom: 120px;
+}
+
+.span-web:hover,
+.span-web:focus,
+.span-web-footer:hover,
+.span-web-footer:focus {
+        color: #4d5ae5;;
+}
+.container {
+        width: 1158px;
+        margin: 0 auto;
+        padding: 0 15px;
 }
 
 .visually-hidden {
@@ -71,11 +98,30 @@ body {
         margin: -1px;
         border: 0;
         padding: 0;
+
         white-space: nowrap;
         clip-path: inset(100%);
         clip: rect(0 0 0 0);
         overflow: hidden;
 }
+
+/* ================= COMPONENTS ================= */
+
+
+
+.address-contacts {
+        font-style: normal;
+}
+
+.filter-button {
+        cursor: pointer;
+        padding: 16px 32px;
+        gap: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+}
+
+
 
 .subtitle {
         font-weight: 700;
@@ -106,6 +152,20 @@ body {
         margin-right: auto;
 }
 
+.logo-header {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        margin-right: 76px;
+}
+
+.logo {
+        text-decoration: none;
+}
+
+.logo:visited {
+        color: #4D5AE5
+}
+
 .logo {
         font-family: 'Raleway', sans-serif;
         font-weight: 800;
@@ -115,12 +175,9 @@ body {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #4D5AE5;
-        margin-right: 76px;
-        padding-top: 25.5px;
-        padding-bottom: 25.5px;
 }
 
-.log {
+.span-web {
         font-weight: 800;
         font-size: 18px;
         line-height: 1.17;
@@ -146,6 +203,12 @@ body {
         letter-spacing: 0.02em;
         color:var(--primary-titletxt-color);
         padding: 24px 0;
+}
+
+.link-active {
+        position: relative;
+        color: #404bbf;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -213,7 +276,7 @@ body {
         margin-bottom: 48px;
 }
 
-.modal-open-btn {
+.order-btn {
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
         font-size: 16px;
@@ -230,8 +293,8 @@ body {
         height: 56px;
 }
 
-.modal-open-btn:hover,
-.modal-open-btn:focus {
+.order-btn:hover,
+.order-btn:focus {
         background-color: var(--accent-hover-color);
 }
 
@@ -551,18 +614,11 @@ body {
 }
 
 .logo-footer {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #4D5AE5;
         display: inline-block;
         margin-bottom: 16px;
 }
 
-.logos {
+.span-web-footer {
         display: inline-block;
         color: var(--secondary-bg-color);
 }
